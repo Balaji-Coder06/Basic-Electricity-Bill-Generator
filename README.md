@@ -17,7 +17,7 @@
 <h3>Steps to Install and Run</h3>
     <pre>
         git clone https://github.com/yourusername/smart-energy-tracker.git
-        cd smart-energy-tracker
+        cd AI-in-Social-Good
         pip install flask
         python app.py
     </pre>
@@ -30,6 +30,6 @@
     <p>To enhance the application's functionality, future updates may include user authentication for personalized tracking, integration with a database for storing long-term usage data, and IoT compatibility for real-time energy monitoring. Additionally, plans are in place to deploy the application on cloud platforms like Heroku or Render to make it easily accessible to users worldwide.</p>
     
 <h2>License</h2>
-    <p>This project is open-source and available under the MIT License. Feel free to contribute and improve its functionality.</p>
+    <p>This project is open-source. Feel free to contribute and improve its functionality.</p>
 </body>
 </html>
