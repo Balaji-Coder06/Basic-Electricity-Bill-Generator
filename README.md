@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Energy Usage Tracker</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-        h1, h2, h3 { color: #2c3e50; }
-        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
-    </style>
-</head>
-<body>
-    <h1>Smart Energy Usage Tracker</h1>
+<h1>Smart Energy Usage Tracker</h1>
     
 <h2>Overview</h2>
 <p>Managing electricity consumption efficiently can help reduce costs and promote sustainable energy use. The Smart Energy Usage Tracker is a web application built with Flask that enables users to monitor their daily electricity consumption and estimate their monthly bill. By simply entering the usage duration of household appliances, users can gain valuable insights into their energy consumption and receive practical energy-saving tips.</p>
