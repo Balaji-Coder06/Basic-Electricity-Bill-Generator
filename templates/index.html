@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Energy Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        input { margin: 5px; padding: 5px; }
+        button { padding: 8px 12px; }
+    </style>
+</head>
+<body>
+    <h2>Smart Energy Usage Tracker ⚡</h2>
+    <label>Appliance:</label>
+    <select id="appliance">
+        <option value="fan">Fan</option>
+        <option value="ac">AC</option>
+        <option value="tv">TV</option>
+        <option value="fridge">Fridge</option>
+        <option value="washing machine">Washing Machine</option>
+        <option value="heater">Heater</option>
+        <option value="computer">Computer</option>
+    </select>
+    <input type="number" id="hours" placeholder="Hours used per day">
+    <button onclick="addUsage()">Add</button>
+
+    <h3>Appliance Usage</h3>
+    <ul id="usageList"></ul>
+
+    <button onclick="calculateBill()">Calculate Bill</button>
+    <h3 id="result"></h3>
+
+    <script>
+        let usageData = {};
+
+        function addUsage() {
+            let appliance = document.getElementById("appliance").value;
+            let hours = document.getElementById("hours").value;
+            if (hours > 0) {
+                usageData[appliance] = parseFloat(hours);
+                document.getElementById("usageList").innerHTML += `<li>${appliance} - ${hours} hours</li>`;
+            }
+        }
+
+        function calculateBill() {
+            fetch('/calculate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(usageData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("result").innerHTML = 
+                    `Total Consumption: ${data.total_kwh} kWh<br>Estimated Bill: ₹${data.estimated_bill}<br><b>Tip:</b> ${data.tips}`;
+            });
+        }
+    </script>
+</body>
+</html>
