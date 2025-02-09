@@ -2,13 +2,10 @@ from flask import Flask, request, render_template, jsonify
 
 app = Flask(__name__)
 
-# Sample power consumption data (in kWh per hour)
 APPLIANCE_DATA = {
     "fan": 0.075, "ac": 1.75, "tv": 0.15, "fridge": 0.25, 
     "washing machine": 0.575, "heater": 2.10, "computer": 0.45
 }
-
-# Electricity rate per kWh (Example: ₹5 per unit)
 ELECTRICITY_RATE = 8.0
 
 @app.route('/')
