@@ -5,7 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Energy Tracker</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        body { 
+    font-family: Arial, 'Times New Roman'; 
+    text-align: center; 
+    margin: 0;  /* Remove extra margins */
+    height: 100vh; /* Ensure full-page coverage */
+    background-image: url('https://img.freepik.com/free-vector/household-appliances-realistic-composition_1284-65307.jpg'); /* Replace with your actual image path */
+    background-size: cover; /* Scale the image to cover the entire screen */
+    background-position: center center; /* Center the image both horizontally and vertically */
+    background-repeat: no-repeat; /* Prevent image repetition */
+}
+#usageList {
+    background: rgba(0, 0, 0, 0.5); /* Black background with 60% opacity */
+    color: white; /* White text */
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+}
+#usageList li {
+    padding: 5px;
+    list-style-type: none;
+}
+
+
         input { margin: 5px; padding: 5px; }
         button { padding: 8px 12px; }
     </style>

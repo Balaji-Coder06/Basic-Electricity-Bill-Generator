@@ -27,7 +27,7 @@ def calculate_usage():
     return jsonify({"total_kwh": round(total_kwh, 2), "estimated_bill": round(estimated_bill, 2), "tips": energy_tips})
 
 def suggest_tips(kwh):
-    if kwh > 50:
+    if kwh > 35:
         return "Your energy consumption is high! Consider using LED bulbs and energy-efficient appliances."
     elif kwh > 20:
         return "Try turning off unused appliances and unplugging devices when not needed."
