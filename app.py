@@ -3,8 +3,8 @@ from flask import Flask, request, render_template, jsonify
 app = Flask(__name__)
 
 APPLIANCE_DATA = {
-    "fan": 0.075, "ac": 1.75, "tv": 0.15, "fridge": 0.25, 
-    "washing machine": 0.575, "heater": 2.10, "computer": 0.45
+    "Fan": 0.075, "AC": 1.75, "TV": 0.15, "Fridge": 0.25, 
+    "Washing Machine": 0.575, "Heater": 2.10, "Computer": 0.45
 }
 ELECTRICITY_RATE = 8.0
 
